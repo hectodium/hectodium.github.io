@@ -1,5 +1,3 @@
-My attempt at making a simple personal website
-
 Template:
 	Strata by HTML5 UP
 	html5up.net | @ajlkn
