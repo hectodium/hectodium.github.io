@@ -1,14 +1,28 @@
 body {
-  background-color: lightblue;
+  background-image: url("/images/bg.jpg");
+  background-position: center;
+  /* background-attachment: scroll; */
 }
 
 h1 {
   color: magenta;
   margin-left: 40px;
-  opacity: 0.3;
+  opacity: 0.8;
 }
 
 h2 {
-    border:2px solid Tomato;
+    border-width:5px;
+    border-style: solid;
+    border-color: tomato;
+    border-radius: 10px 30px 10px 30px;
     background-color: DodgerBlue;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+p, ul, a, h3 {
+    color: white;
 }
