@@ -1,0 +1,30 @@
+body {
+  background-color: lightblue;
+}
+
+/* element (and group) selector */
+h1, h2, p {
+  text-align: center;
+  color: red;
+}
+
+/* id selector */
+ #foss {
+  text-align: center;
+  color: green;
+}
+
+/* clsss selector */
+.major {
+  text-align: center;
+}
+
+p.major {
+  color: red;
+}
+
+/* universal selectro */
+* {
+  text-align: center;
+  color: blue;
+}
