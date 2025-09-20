@@ -28,3 +28,30 @@ p.major {
   text-align: center;
   color: blue;
 }
+
+/* element only when inside other element (first is parent second is child) */
+
+ul li {
+  color: cyan
+}
+
+/* element state */
+/* when hovered with mouse */
+h2:hover {
+  background-color: red;
+}
+/* when clicked */
+h2:active {
+  background-color: green;
+}
+/* also
+<p onclick="myFunction()">Click to show panel</p> */
+
+/* make nth row in a table a different color
+tr:nth-child(even){background-color: #f2f2f2;} */
+
+/* make table responsive (horizontally scrollable
+div.tablecontainer {
+  overflow-x: auto;
+}
+*/
