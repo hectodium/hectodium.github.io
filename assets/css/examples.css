@@ -47,11 +47,17 @@ h2:active {
 /* also
 <p onclick="myFunction()">Click to show panel</p> */
 
-/* make nth row in a table a different color
-tr:nth-child(even){background-color: #f2f2f2;} */
+/* make nth row in a table a different color */
+tr:nth-child(even){background-color: #f2f2f2;}
 
-/* make table responsive (horizontally scrollable
+/* make table responsive (horizontally scrollable */
 div.tablecontainer {
   overflow-x: auto;
 }
-*/
+
+/* clearfix hack */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
