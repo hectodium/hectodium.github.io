@@ -1,0 +1,47 @@
+body {
+  background-image: url("/images/bg.jpg");
+  background-position: center;
+  /* background-attachment: scroll; */
+}
+
+h1 {
+  color: magenta;
+  margin-left: 40px;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+}
+
+h2 {
+    border-width:5px;
+    border-style: solid;
+    border-color: tomato;
+    border-radius: 10px 30px 10px 30px;
+    background-color: DodgerBlue;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+h2:hover {
+  background-color: red;
+  cursor: wait
+}
+h2:active {
+  background-color: green;
+}
+
+p, ul, a, h3 {
+    color: white;
+}
+
+ul li {
+  color: cyan
+}
+
+* {
+  font-family: Helvetica;
+}
