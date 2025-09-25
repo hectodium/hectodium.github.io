@@ -61,3 +61,63 @@ div.tablecontainer {
   clear: both;
   display: table;
 }
+
+/* Combinators */
+
+/* descendant combinator: space */
+/* all p elements inside div elements */
+div p {
+  background-color: yellow;
+}
+
+/* child combinator: > */
+/* only direct children, immediately descendant */
+ div > p {
+  background-color: yellow;
+}
+
+/* next sibling combinator: + */
+/* elements that are right next to each other on the same level within the same parent */
+div + p {
+  background-color: yellow;
+}
+
+/* subsequent-sibling combinator: ~ */
+/* style all ul elements that come after any p element, no need to be immediately after and within the same parent */
+p ~ ul {
+  background-color: gold;
+  border: 1px solid gray;
+}
+
+/* Pseudo-classes, the ":" operator */
+ /* unvisited link */
+a:link {
+  color: #FF0000;
+}
+
+/* visited link */
+a:visited {
+  color: #00FF00;
+}
+
+/* mouse over link */
+a:hover {
+  color: #FF00FF;
+}
+
+/* selected link */
+a:active {
+  color: #0000FF;
+} 
+
+/* when input box is focused */
+input:focus {
+  background-color: yellow;
+}
+
+/* with descendant combinator */
+/* change visibility of all p elements inside div when hovered */
+div:hover p {
+  display: block;
+}
+
