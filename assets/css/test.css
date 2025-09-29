@@ -1,72 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+  color-scheme: light dark;
+}
+
 body {
     margin: 0;
-    background-color: #f5f5dc;
+    /* background-color: #f5f5dc; */
+    background-color: light-dark(beige, rgb(65, 45, 31));
     padding: 0;
 }
 
 p {
     font-family: Montserrat;
-}
-
-.main-title { 
-    /* 
-    font-family: Helvetica;
-    text-align: center;
-    border-color: red;
-
-    transform: scaleY(0.5); */
-    /* width: 100vw; */
-    /* min-height: 20vw;
-    max-height: 20vw; */
-    height: 23vw;
-    /* background-scolor: aqua; */
-    padding: 0px;
-    text-align: center;
-    /* font-size: 25vw; */
-    font-weight: bold;
-    position: relative;
-    top: 0;
-    overflow: hidden;
-    /* max-height: 20vh; */
-    
-}
-
-#firstname {
     /* background-color: red; */
-    max-width: 100%;
-    height: 20vw;
-    text-align: center;
-    font-size: 28.69vw;
-    font-weight: 900;
-    /* transform: scaleX(1.36); */
-    overflow: hidden;
-    /* vertical-align: super; */
-    line-height: 0.62;
-    text-indent: -1.9vw;
-    /* display: inline-block; */
 }
 
-#surname1, #surname2 {
-    font-size: 3.2vw;
-    line-height: 0.62;
-    font-weight: 700;
-    letter-spacing: 4vw;
-}
-
-#surname1 {
-    float: left;
-    text-indent: -0.25vw;
-}
-#surname2 {
-    /* background-color: violet; */
-    float: right;
-    text-align: right;
-    width: 50vw;
-    height: 10vh;
-    position: relative;
-    left: 4.3vw;
+#title:hover {
+    cursor: default;
 }
 
 #firstname,
@@ -74,7 +25,7 @@ p {
 #surname2 {
     margin: 0px;
     padding: 0px;
-    color: rgb(65, 45, 31);
+    color: light-dark(rgb(65, 45, 31), beige);
 }
 
 #firstname:hover,
@@ -83,10 +34,10 @@ p {
     cursor: default ;
 }
 
-.subtitle {
+/* .subtitle {
     width: 100%;
     height: 40vh;
-    /* background-color: red; */
+    background-color: red;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,4 +49,172 @@ p {
     color: rgb(65, 45, 31);
     padding: 0 10vw;
     text-align: center;
+} */
+
+/* Portrait */
+@media screen and (orientation:portrait) {
+
+    #title { 
+        /* 
+        font-family: Helvetica;
+        text-align: center;
+        border-color: red;
+
+        transform: scaleY(0.5); */
+        /* width: 100vw; */
+        /* min-height: 20vw;
+        max-height: 20vw; */
+        height: 23vw;
+        /* background-color: aqua; */
+        padding: 0px;
+        /* text-align: center; */
+        /* font-size: 25vw; */
+        /* font-weight: bold; */
+        /* position: relative;
+        top: 0; */
+        overflow: hidden;
+        display: block;
+        /* max-height: 20vh; */
+    }
+
+    #firstname {
+        /* background-color: red; */
+        max-width: 100%;
+        height: 20vw;
+        text-align: center;
+        font-size: 28.69vw;
+        font-weight: 900;
+        /* transform: scaleX(1.36); */
+        overflow: hidden;
+        /* vertical-align: super; */
+        line-height: 0.62;
+        text-indent: -1.9vw;
+        /* display: inline-block; */
+    }
+
+    #surname1 {
+        float: left;
+        text-indent: -0.25vw;
+    }
+
+    #surname2 {
+        /* background-color: violet; */
+        float: right;
+        text-align: right;
+        width: 50vw;
+        /* height: 10vh; */
+        position: relative;
+        left: 4.3vw;
+    }
+
+    #surname1, #surname2 {
+        font-size: 3.2vw;
+        line-height: 0.62;
+        font-weight: 700;
+        letter-spacing: 4vw;
+    }
+
+    #main {
+        margin: 3vh 10vw;
+        padding: 0px;
+        background-color: red;
+        text-align: center;
+        display: block;
+        height: 50vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .thumbnail {
+        height: 400px;
+        width: 80vw;
+        background-color: green;
+        margin: 20px 0px;
+    }
+}
+/* Landscape */
+@media screen and (orientation:landscape) {
+
+    #title { 
+        /* 
+        font-family: Helvetica;
+        text-align: center;
+        border-color: red;
+
+        transform: scaleY(0.5); */
+        /* width: 100vw; */
+        /* min-height: 20vw;
+        max-height: 20vw; */
+        height: 23vw;
+        /* background-color: aqua; */
+        padding: 0px;
+        /* text-align: center; */
+        /* font-size: 25vw; */
+        /* font-weight: bold; */
+        /* position: relative;
+        top: 0; */
+        overflow: hidden;
+        display: block;
+        /* max-height: 20vh; */
+    }
+
+    #firstname {
+        /* background-color: red; */
+        width: 100%;
+        height: 11vw;
+        text-align: center;
+        font-size: 15vw;
+        font-weight: 900;
+        /* transform: scaleX(1.36); */
+        overflow: hidden;
+        /* vertical-align: super; */
+        line-height: 0.62;
+        text-indent: -1.9vw;
+        /* display: inline-block; */
+        /* letter-spacing: 9.72vw; */
+        float: left;;
+    }
+
+    #surname1 {
+        /* background-color: blueviolet; */
+        float: left;
+        text-indent: 22.9vw;
+    }
+
+    #surname2 {
+        /* background-color: violet; */
+        float: right;
+        text-align: right;
+        /* width: 50vw; */
+        /* height: 10vh; */
+        position: relative;
+        right: 21.9vw;
+    }
+
+    #surname1, #surname2 {
+        font-size: 2vw;
+        /* line-height: 0.62; */
+        font-weight: 700;
+        letter-spacing: 2.5vw;
+    }
+
+    #main {
+        margin: 0px 10vw;
+        padding: 0px;
+        background-color: red;
+        text-align: center;
+        display: block;
+        height: 50vh;
+        /* display: flex; */
+        /* justify-content: center; */
+        /* align-items: center; */
+    }
+
+   .thumbnail {
+        height: 400px;
+        width: 400px;
+        background-color: blue;
+        float: left;
+        margin: 20px;
+}
 }
