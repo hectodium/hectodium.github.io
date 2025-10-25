@@ -10,6 +10,9 @@ body {
     background-color: beige;
     /* background-color: light-dark(beige, rgb(65, 45, 31)); */
     padding: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 p {
@@ -52,6 +55,16 @@ p {
     padding: 0 10vw;
     text-align: center;
 } */
+
+#features-table {
+    border-collapse: collapse;  
+}
+
+#features-table th, td {
+    padding: 10px;
+    border: 1px solid black;
+    text-align: left;
+}
 
 /* Portrait */
 @media screen and (orientation:portrait) {
@@ -116,10 +129,10 @@ p {
         letter-spacing: 4vw;
     }
 
-    #main-test {
+    #main {
         margin: 3vh 10vw;
         padding: 0px;
-        background-color: red;
+        /* background-color: red; */
         text-align: center;
         display: block;
         height: 50vh;
@@ -127,10 +140,10 @@ p {
         align-items: center;
     }
 
-    .thumbnail-test {
+    .thumbnail {
         height: 400px;
         width: 80vw;
-        background-color: green;
+        /* background-color: green; */
         margin: 20px 0px;
     }
 }
@@ -200,10 +213,10 @@ p {
         letter-spacing: 2.5vw;
     }
 
-    #main-test {
+    #main {
         margin: 0px 10vw;
         padding: 0px;
-        background-color: red;
+        /* background-color: red; */
         text-align: center;
         display: block;
         height: 50vh;
@@ -212,10 +225,10 @@ p {
         /* align-items: center; */
     }
 
-   .thumbnail-test {
+   .thumbnail {
         height: 400px;
         width: 400px;
-        background-color: blue;
+        /* background-color: blue; */
         float: left;
         margin: 20px;
 }

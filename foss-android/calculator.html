@@ -9,7 +9,7 @@
 		<title>FOSS Catalog</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="/assets/css/main.css" />
+		<link rel="stylesheet" href="/css/main.css" />
 	</head>
 	<body class="is-preload">
 
@@ -37,14 +37,35 @@
 					</section>
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<div id="features"></div>
 
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="/js/derekeder/csv-to-html-table/js/jquery.csv.min.js"></script>
+		<script src="/js/derekeder/csv-to-html-table/js/csv_to_html_table.js"></script>
+
+		<script>
+			function format_link(link) {
+            if (link)
+                return "<a href='" + link + "' target='_blank'>" + link + "</a>";
+            else return "";
+        	}
+
+			CsvToHtmlTable.init({
+				csv_path: "/tables/foss-android/calculator.csv",
+				element: "features",
+				allow_download: true,
+				csv_options: {
+					separator: ";",
+					delimiter: '"'
+				},
+				datatables_options: {
+					paging: false
+				},
+				custom_formatting: [
+                [4, format_link]
+            ]
+			});
+			</script>
 	</body>
 
 </html>
