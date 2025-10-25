@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root {
+/* :root {
   color-scheme: light dark;
-}
+} */
 
 body {
     margin: 0;
     /* background-color: #f5f5dc; */
-    background-color: light-dark(beige, rgb(65, 45, 31));
+    background-color: beige;
+    /* background-color: light-dark(beige, rgb(65, 45, 31)); */
     padding: 0;
 }
 
@@ -25,7 +26,8 @@ p {
 #surname2 {
     margin: 0px;
     padding: 0px;
-    color: light-dark(rgb(65, 45, 31), beige);
+    color: rgb(65, 45, 31);
+    /* color: light-dark(rgb(65, 45, 31), beige); */
 }
 
 #firstname:hover,
@@ -114,7 +116,7 @@ p {
         letter-spacing: 4vw;
     }
 
-    #main {
+    #main-test {
         margin: 3vh 10vw;
         padding: 0px;
         background-color: red;
@@ -125,7 +127,7 @@ p {
         align-items: center;
     }
 
-    .thumbnail {
+    .thumbnail-test {
         height: 400px;
         width: 80vw;
         background-color: green;
@@ -198,7 +200,7 @@ p {
         letter-spacing: 2.5vw;
     }
 
-    #main {
+    #main-test {
         margin: 0px 10vw;
         padding: 0px;
         background-color: red;
@@ -210,7 +212,7 @@ p {
         /* align-items: center; */
     }
 
-   .thumbnail {
+   .thumbnail-test {
         height: 400px;
         width: 400px;
         background-color: blue;
