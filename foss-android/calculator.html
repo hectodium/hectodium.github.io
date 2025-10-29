@@ -1,17 +1,16 @@
 <!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 		<title>FOSS Catalog</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="/css/main.css" />
+		<script src="/tables/foss-android/calculator.js"></script>
+		<!-- <script src="/js/read_file.js"></script> -->
 	</head>
 	<body class="is-preload">
+		
 
 		<!-- Main -->
 			<div id="main">
@@ -29,43 +28,29 @@
 						<p>
                             Placeholder
 						</p>
-                        <h2>Other alternatives</h2>
-                        <ul>
-                            <li>placeholder</li>
-                        </ul>
+						
+						<div role="insert"></div>
+                        
 						
 					</section>
+					
+					
 			</div>
 
-		<div id="features"></div>
-
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-		<script src="/js/derekeder/csv-to-html-table/js/jquery.csv.min.js"></script>
-		<script src="/js/derekeder/csv-to-html-table/js/csv_to_html_table.js"></script>
+			<section id="table-section">
+						<h2>Other alternatives</h2>
+						<div role="table" class="android-foss-table-container"></div>
+					</section>
 
 		<script>
-			function format_link(link) {
-            if (link)
-                return "<a href='" + link + "' target='_blank'>" + link + "</a>";
-            else return "";
-        	}
 
-			CsvToHtmlTable.init({
-				csv_path: "/tables/foss-android/calculator.csv",
-				element: "features",
-				allow_download: true,
-				csv_options: {
-					separator: ";",
-					delimiter: '"'
-				},
-				datatables_options: {
-					paging: false
-				},
-				custom_formatting: [
-                [4, format_link]
-            ]
+		</script>
+		<script>
+			// this part can also be part of nav.js 
+			window.addEventListener('DOMContentLoaded', () => {
+			let barnav = document.querySelector('div[role="table"]');
+			barnav.innerHTML = table;
 			});
-			</script>
+		</script>
 	</body>
-
 </html>

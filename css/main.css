@@ -1,25 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* :root {
+:root {
   color-scheme: light dark;
-} */
+  --main-title-color: light-dark(rgb(65, 45, 31), beige);
+  --main-bg-color: light-dark(beige, #222);
+  --main-txt-color: light-dark(black, white);
+}
 
 body {
     margin: 0;
-    /* background-color: #f5f5dc; */
-    background-color: beige;
-    /* background-color: light-dark(beige, rgb(65, 45, 31)); */
+    background-color: var(--main-bg-color);
+    color: var(--main-txt-color);
     padding: 0;
     text-align: center;
     justify-content: center;
     align-items: center;
-}
-
-p {
+    overflow-x: hidden;
     font-family: Montserrat;
-    /* background-color: red; */
 }
 
+/* Main title */
 #title:hover {
     cursor: default;
 }
@@ -29,8 +29,7 @@ p {
 #surname2 {
     margin: 0px;
     padding: 0px;
-    color: rgb(65, 45, 31);
-    /* color: light-dark(rgb(65, 45, 31), beige); */
+    color: var(--main-title-color);
 }
 
 #firstname:hover,
@@ -39,31 +38,67 @@ p {
     cursor: default ;
 }
 
-/* .subtitle {
+/* FOSS Android tables */
+.android-foss-table-container {
+    overflow-x: auto;
+    font-family: 'serif';
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.android-foss-table {
+    font-size: small;
+    /* display: flex; */
     width: 100%;
-    height: 40vh;
-    background-color: red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    table-layout: fixed;
+    /* border-collapse: collapse; */
 }
 
-.subtitle p {
-    font-size: 4vh;
-    font-weight: 500;
-    color: rgb(65, 45, 31);
-    padding: 0 10vw;
+td {
     text-align: center;
-} */
-
-#features-table {
-    border-collapse: collapse;  
+    /* border-bottom: 1px solid ivory; */
 }
 
-#features-table th, td {
-    padding: 10px;
-    border: 1px solid black;
-    text-align: left;
+th {
+    width: 130px;
+}
+
+.android-foss-table td:nth-child(1), th:nth-child(1) {  
+  position: sticky;
+  left: 0;
+  background-color: var(--main-bg-color);
+  text-align: left;
+  width: 150px;
+}
+
+.green, .lgreen, .yellow, .lred, .red {
+    color: black;
+}
+
+.green{
+  background-color: #CEE6BB;
+}
+
+.lgreen{
+  background-color: #E7F2DD;
+}
+
+.yellow{
+  background-color: #E7DEB1;
+}
+
+.lred{
+  background-color: #F5E0D6;
+}
+
+.red{
+  background-color: #EBC1AD;
+}
+
+.title-row {
+    padding-top: 40px;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 /* Portrait */
@@ -146,7 +181,12 @@ p {
         /* background-color: green; */
         margin: 20px 0px;
     }
+
+    .android-foss-table td:nth-child(1), th:nth-child(1) {  
+        width: 140px;
+    }
 }
+
 /* Landscape */
 @media screen and (orientation:landscape) {
 
@@ -231,5 +271,9 @@ p {
         /* background-color: blue; */
         float: left;
         margin: 20px;
-}
+    }
+
+    .android-foss-table td:nth-child(1), th:nth-child(1) {  
+        width: 220px;
+    }
 }
